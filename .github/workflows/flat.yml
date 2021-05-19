@@ -1,0 +1,23 @@
+name: data
+on:
+  schedule:
+    - cron: 0 0 * * *
+  workflow_dispatch: {}
+  push:
+    paths:
+      - .github/workflows/flat.yml
+      - ./postprocess.ts
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup deno
+        uses: denolib/setup-deno@v2
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Fetch data
+        uses: githubocto/flat@v2
+        with:
+          http_url: https://api.coindesk.com/v2/bpi/currentprice.json
+          downloaded_filename: btc-price.json
+          postprocess: ./postprocess.ts
