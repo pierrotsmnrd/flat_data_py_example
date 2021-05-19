@@ -12,7 +12,7 @@ This example also shows how to install requirements and write a new file.
 
 - the Flat Data action is scheduled daily, and download the BTC prices data (as seen in [Github Octo's example](https://github.com/githubocto/flat-demo-bitcoin-price/)) and stores it in `btc-price.json`
 
-- the `postprocess.ts` script is then ran, triggers the install of python packages, and runs the main python script `postprocess.py`. it also forwards the arguments.
+- the `postprocess.ts` script is then run, triggers the install of python packages, and runs the main python script `postprocess.py`. it also forwards the arguments.
 
 - `postprocess.py` prints out its received arguments, and then generates a dummy output CSV file `df_output.csv`, for the sake of the example.
 
