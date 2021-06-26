@@ -1,4 +1,5 @@
-import 'https://deno.land/x/flat@0.0.10/mod.ts'
+# Is this the cause of the failures ?
+#import 'https://deno.land/x/flat@0.0.10/mod.ts'
 
 
 // install requirements with pip
